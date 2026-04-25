@@ -22,7 +22,7 @@ export const products: Product[] = [
     name: "Americano",
     price: "Rp 20.000",
     description: "Smooth espresso with hot water",
-    image: "https://images.unsplash.com/photo-1521302200778-33500795e128?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1534778101976-62847782c213?w=800&q=80",
   },
   {
     id: 3,
@@ -55,5 +55,13 @@ export const products: Product[] = [
     price: "Rp 22.000",
     description: "Local favorite with palm sugar",
     image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800&q=80",
+  },
+  {
+    id: 7,
+    slug: "lemonade",
+    name: "Coffee Lemonade",
+    price: "Rp 20.000",
+    description: "Espresso segar dicampur lemon juice — asam, manis, bold",
+    image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80",
   },
 ]

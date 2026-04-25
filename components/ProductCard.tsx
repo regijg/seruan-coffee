@@ -28,29 +28,31 @@ export default function ProductCard({ product }: Props) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
-      <div className="p-5">
-        <h3 className="font-bold text-lg text-zinc-900 dark:text-white tracking-tight">
+      <div className="p-3 sm:p-5">
+        <h3 className="font-bold text-sm sm:text-lg text-zinc-900 dark:text-white tracking-tight leading-tight">
           {product.name}
         </h3>
-        <p className="text-zinc-500 dark:text-zinc-400 text-sm mt-1 mb-3 leading-relaxed">
+        <p className="hidden sm:block text-zinc-500 dark:text-zinc-400 text-sm mt-1 mb-3 leading-relaxed">
           {product.description}
         </p>
-        <p className="text-amber-500 font-extrabold text-2xl mb-4 tracking-tight">
+        <p className="text-amber-500 font-extrabold text-base sm:text-2xl mt-1 mb-3 sm:mb-4 tracking-tight">
           {product.price}
         </p>
 
-        <div className="flex gap-2">
+        <div className="flex gap-1.5 sm:gap-2">
           <Link
             href={`/product/${product.slug}`}
-            className="flex-1 flex items-center justify-center gap-1.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white text-sm font-semibold py-2.5 rounded-xl hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors duration-150"
+            className="flex-1 flex items-center justify-center gap-1 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white text-xs sm:text-sm font-semibold py-2 sm:py-2.5 rounded-xl hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors duration-150"
           >
-            Detail <ArrowRight className="w-3.5 h-3.5" />
+            Detail <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
           </Link>
           <button
             onClick={() => orderViaWhatsApp(product)}
-            className="flex-1 flex items-center justify-center gap-1.5 bg-emerald-500 hover:bg-emerald-400 text-white text-sm font-semibold py-2.5 rounded-xl transition-colors duration-150"
+            className="flex-1 flex items-center justify-center gap-1 bg-emerald-500 hover:bg-emerald-400 text-white text-xs sm:text-sm font-semibold py-2 sm:py-2.5 rounded-xl transition-colors duration-150"
           >
-            <MessageCircle className="w-3.5 h-3.5" /> WhatsApp
+            <MessageCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+            <span className="hidden xs:inline sm:inline">WA</span>
+            <span className="sr-only">WhatsApp</span>
           </button>
         </div>
       </div>
