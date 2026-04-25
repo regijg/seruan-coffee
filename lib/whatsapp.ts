@@ -1,6 +1,6 @@
 import type { Product } from "@/data/products"
 
-const WHATSAPP_NUMBER = "6281234567890"
+const WHATSAPP_NUMBER = "6281287627817"
 
 export function orderViaWhatsApp(product: Product) {
   const baseUrl = window.location.origin
